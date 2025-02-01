@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25px;
+  background-color: #1f2937;
+}
+
+.logo {
+  font-size: 24px;
+  color: #f9faf8;
+}
+
+.links {
+  font-size: 18px;
+  color: #e5e7eb;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
