@@ -121,3 +121,43 @@ ul {
   color: #1f2937;
   font-weight: 900;
 }
+
+.banner-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
+  padding-bottom: 180px;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+  width: 1000px;
+  height: 140px;
+  background-color: #3882f6;
+  border-radius: 10px;
+}
+
+.banner-title {
+  font-size: 20px;
+  color: #f9faf8;
+  font-weight: 900;
+}
+
+.banner-text {
+  font-size: 16px;
+  color: #dbdbdb;
+  font-weight: 300;
+}
+
+.banner-button {
+  border: 2px solid #f9faf8;
+  color: #f9faf8;
+  background-color: #3882f6;
+  border-radius: 8px;
+  font-weight: 900;
+  width: 120px;
+  height: 30px;
+}
