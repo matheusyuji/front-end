@@ -66,6 +66,7 @@ ul {
   display: flex;
   flex-direction: column;
   padding-top: 60px;
+  padding-bottom: 120px;
 }
 
 .info-title {
@@ -92,4 +93,31 @@ ul {
   height: 140px;
   border: 4px solid #3882f6;
   border-radius: 8px;
+}
+
+.quote-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #e5e7eb;
+  padding-top: 150px;
+  padding-bottom: 120px;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote {
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+  color: #1f2937;
+  width: 750px;
+}
+
+.quote-author {
+  display: flex;
+  width: 750px;
+  justify-content: flex-end;
+  font-size: 26px;
+  color: #1f2937;
+  font-weight: 900;
 }
