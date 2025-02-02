@@ -30,3 +30,59 @@ function getHumanChoice() {
       return getHumanChoice();
   }
 }
+
+let humanScore = 0;
+let computerScore = 0;
+
+function incrementScore(player) {
+  if(player === "human") {
+    humanScore++;
+  } else {
+    computerScore++
+  }
+} 
+
+function showResult(humanChoice, computerChoice, winner) {
+  if(winner == "human") {
+    console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+    incrementScore("human");
+  } else {
+    console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+    incrementScore("computer");
+  }
+}
+
+function playRound(humanChoice, computerChoice) {
+  if(humanChoice === computerChoice) {
+    console.log(`It's a tie between ${humanChoice} and ${computerChoice}`);
+    return;
+  }
+  switch(humanChoice) {
+    case "ROCK":
+      if(computerChoice === "PAPER") {
+        showResult(humanChoice, computerChoice, "computer");
+      } else {
+        showResult(humanChoice, computerChoice, "human");
+      }
+      break;
+    case "PAPER":
+      if(computerChoice == "SCISSORS") {
+        showResult(humanChoice, computerChoice, "computer");
+      } else {
+        showResult(humanChoice, computerChoice, "human");
+      }
+      break;
+    case "SCISSORS":
+      if(computerChoice == "ROCK") {
+        showResult(humanChoice, computerChoice, "computer");
+      } else {
+        showResult(humanChoice, computerChoice, "human");
+      }
+      break;
+  }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
