@@ -1,5 +1,7 @@
+let color = "black";
+
 function mouseOver (event) {
-  event.target.style.backgroundColor = "black";
+  event.target.style.backgroundColor = color;
 }
   
 function createGrid(size) {
@@ -32,4 +34,15 @@ function resize() {
   createGrid(size);
 }
 
-createGrid(20);
+document.addEventListener("DOMContentLoaded", () => {
+  createGrid(20);
+  const btnColors = document.querySelectorAll(".btn-colors");
+  const currentColor = document.querySelector(".current-color");
+
+  btnColors.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      color = event.target.id;
+      currentColor.style.backgroundColor = color;
+    });
+  });
+});
