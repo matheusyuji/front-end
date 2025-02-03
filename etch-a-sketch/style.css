@@ -31,6 +31,7 @@ html, body {
 .sidebar {
   display: flex;
   flex-direction: column;
+  align-items: center;
   border: 3px solid rgb(0, 0, 0);
   border-radius: 10px;
   width: 300px;
@@ -43,9 +44,64 @@ html, body {
 .sidebar-title {
   text-align: center;
   padding-top: 10px;
+  padding-bottom: 20px;
 }
 
-button {
+.sidebar-colors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 10px;  
+  height: 300px;
+  width: 200px;
+  margin-bottom: 20px;
+  align-content: center;
+}
+
+.current-color {
+  width: 155px;
+  height: 40px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  background-color: black; 
+  margin-bottom: 60px;
+}
+
+.btn-colors {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+#FFFDF0 {
+  background-color: #FFFDF0;
+}
+
+#black {
+  background-color: black;
+}
+
+#red {
+  background-color: red;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#green {
+  background-color: green;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+.btn-reset {
   border: 3px solid rgb(0, 0, 0);
   border-radius: 10px;
   background-color: #FFFDF0;

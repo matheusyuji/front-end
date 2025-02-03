@@ -32,7 +32,4 @@ function resize() {
   createGrid(size);
 }
 
-const btnReset = document.querySelector(".btn-reset");
-btnReset.addEventListener("click", resize)
-
 createGrid(20);
