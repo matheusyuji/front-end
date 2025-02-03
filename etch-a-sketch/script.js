@@ -15,4 +15,24 @@ function createGrid(size) {
   }
 }
 
+function getSize() {
+  let size = prompt("Enter the number of squares per side (maximum 100).");
+  size = parseInt(size);
+  if(isNaN(size) || size < 1 || size > 100) {
+    alert("Please enter a valid number between 1 and 100.");
+    return getSize();
+  }
+  return size;
+}
+
+function resize() {
+  let size = getSize();
+  const grid = document.querySelector(".grid");
+  grid.innerHTML = "";
+  createGrid(size);
+}
+
+const btnReset = document.querySelector(".btn-reset");
+btnReset.addEventListener("click", resize)
+
 createGrid(20);

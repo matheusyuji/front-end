@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: DejaVu Sans Mono, monospace;
 }
 
 html, body {
@@ -12,6 +13,11 @@ html, body {
   justify-content: center;
   align-items:  center;
   background-color: #D9DFC6;
+}
+
+.title {
+  font-size: 35px;
+  padding-bottom: 40px;
 }
 
 .container-main {
@@ -32,6 +38,21 @@ html, body {
   margin-left: 100px;
   height: 600px;
   background-color: #dadfca;
+}
+
+.sidebar-title {
+  text-align: center;
+  padding-top: 10px;
+}
+
+button {
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  background-color: #FFFDF0;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  align-self: center;
+  width: 80px;
 }
 
 .grid {
