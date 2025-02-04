@@ -51,7 +51,7 @@ function playRound(playerChoice, computerChoice) {
 let playerScore = 0;
 let computerScore = 0;
 
-const buttons = document.querySelectorAll("button");
+const btnChoice = document.querySelectorAll(".btn-choice");
 const computerScoreDiv = document.querySelector(".computer-score");
 const playerScoreDiv = document.querySelector(".player-score");
 const roundWinner = document.querySelector(".round-winner");
@@ -77,15 +77,23 @@ function showResult(result) {
 // ve se um dos dois tem score === 5
 // mensagem do vencedor 
 
+function disableButtons() {
+  btnChoice.forEach(btn => {
+    btn.disabled = true;
+  });
+}
+
 function checkGameOver() { 
   if (playerScore === 5) {
     gameWinner.textContent = `Congratulations! You won from ${playerScore} to ${computerScore}`
+    disableButtons();
   } else if (computerScore === 5) {
     gameWinner.textContent = `Failed! You lost from ${computerScore} to ${playerScore}`
+    disableButtons();
   }
 }
 
-buttons.forEach((btn) => {
+btnChoice.forEach((btn) => {
   btn.addEventListener("click", (event) => {
     let playerSelection = event.target.id;
     playerSelection = playerSelection.toUpperCase();
