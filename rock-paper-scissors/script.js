@@ -17,16 +17,6 @@ function getComputerChoice() {
   }
 }
 
-//function showResult(humanChoice, computerChoice, winner) {
-  //if(winner === "human") {
-    //console.log(`You win! ${humanChoice} beats ${computerChoice}`);
-  //} else if(winner === "computer") {
-    //console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
-  //} else {
-    //console.log(`It's a tie between ${humanChoice} and ${computerChoice}`);
-  //}
-//}
-
 function playRound(playerChoice, computerChoice) {
   if(playerChoice === computerChoice) {
     return {playerChoice, computerChoice, winner: "tie"};
@@ -56,36 +46,6 @@ function playRound(playerChoice, computerChoice) {
   }
 
   return {playerChoice, computerChoice, winner};
-}
-
-function gameWinner(humanScore, computerScore) {
-  if (humanScore > computerScore) {
-    console.log(`Congratulations! You won from ${humanScore} to ${computerScore}`)
-  } else {
-    console.log(`Failed! You lost from ${computerScore} to ${humanScore}`)
-  }
-}
-
-function playGame() {
-  let humanScore = 0;
-  let computerScore = 0;
-  let round = 0;
-
-  while(round < 5) {
-    let humanSelection = getHumanChoice();
-    let computerSelection = getComputerChoice();
-
-    let result = playRound(humanSelection, computerSelection);
-    showResult(result.humanChoice, result.computerChoice, result.winner);
-    if(result.winner === "human") {
-      humanScore++;
-      round++;
-    } else if(result.winner === "computer") {
-      computerScore++;
-      round++;
-    }
-  }
-  gameWinner(humanScore, computerScore);
 }
 
 let playerScore = 0;
