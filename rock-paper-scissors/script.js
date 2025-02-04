@@ -55,6 +55,7 @@ const buttons = document.querySelectorAll("button");
 const computerScoreDiv = document.querySelector(".computer-score");
 const playerScoreDiv = document.querySelector(".player-score");
 const roundWinner = document.querySelector(".round-winner");
+const gameWinner = document.querySelector(".game-winner");
 
 computerScoreDiv.textContent = `${computerScore}`
 playerScoreDiv.textContent = `${playerScore}`
@@ -73,6 +74,17 @@ function showResult(result) {
   }
 }
 
+// ve se um dos dois tem score === 5
+// mensagem do vencedor 
+
+function checkGameOver() { 
+  if (playerScore === 5) {
+    gameWinner.textContent = `Congratulations! You won from ${playerScore} to ${computerScore}`
+  } else if (computerScore === 5) {
+    gameWinner.textContent = `Failed! You lost from ${computerScore} to ${playerScore}`
+  }
+}
+
 buttons.forEach((btn) => {
   btn.addEventListener("click", (event) => {
     let playerSelection = event.target.id;
@@ -80,9 +92,9 @@ buttons.forEach((btn) => {
     let computerSelection = getComputerChoice();
     let result = playRound(playerSelection, computerSelection);
     showResult(result);
-
+    checkGameOver();
     // verifica se o game acabo
     // caso acabe anuncia o vencedor e reseta o game => um botao
-
+    // 2 formas de resetar o game acabando ou clicando no botao
   });
 });
