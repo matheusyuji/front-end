@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #213555;
+}
+
+#title {
+  font-size: 60px;
+  color: #F5EFE7;
+  margin-bottom: 40px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3E5879;
+  box-shadow: 0 0 10px 5px #3E5879;
+  border-radius: 10px;
+  height: 800px;
+  width: 600px;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-choice {
+  font-size: 3.8rem;
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  width: 400px;
+  box-shadow: 0 0 10px 5px #213555;
+  border-radius: 10px;
+  color: #F5EFE7;
+}
+
+.result-score {
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+.result-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.round-winner {
+  padding-top: 40px;
+  font-size: 25px;
+}
+
+.game-winner {
+  padding-top: 120px;
+  font-size: 50px;
+}
+
+.btn-reset {
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 200px;
+  margin-top: 50px;
+  font-size: 30px;
+  color: black;
+  background-color: #D8C4B6;
+}

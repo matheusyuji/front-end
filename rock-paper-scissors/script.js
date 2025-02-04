@@ -51,6 +51,9 @@ function playRound(playerChoice, computerChoice) {
 let playerScore = 0;
 let computerScore = 0;
 
+let playerTextContent;
+let computerTextContent;
+
 const btnChoice = document.querySelectorAll(".btn-choice");
 const btnReset = document.querySelector(".btn-reset");
 const computerScoreDiv = document.querySelector(".computer-score");
@@ -58,20 +61,42 @@ const playerScoreDiv = document.querySelector(".player-score");
 const roundWinner = document.querySelector(".round-winner");
 const gameWinner = document.querySelector(".game-winner");
 
+const paper = document.querySelector("#paper");
+const rock = document.querySelector("#rock");
+const scissors = document.querySelector("#scissors")
+
 computerScoreDiv.textContent = `${computerScore}`
 playerScoreDiv.textContent = `${playerScore}`
+
+function getTextContent(result) {
+  if (result.playerChoice === "ROCK") {
+    playerTextContent = rock.textContent;
+  } else if (result.playerChoice === "PAPER") {
+    playerTextContent = paper.textContent;
+  } else {
+    playerTextContent = scissors.textContent;
+  }
+
+  if (result.computerChoice === "ROCK") {
+    computerTextContent = rock.textContent;
+  } else if (result.computerChoice  === "PAPER") {
+    computerTextContent = paper.textContent;
+  } else {
+    computerTextContent = scissors.textContent;
+  }
+}
 
 function showResult(result) {
   if (result.winner === "player") {
     ++playerScore;
     playerScoreDiv.textContent = `${playerScore}`;
-    roundWinner.textContent = `You win! ${result.playerChoice} beats ${result.computerChoice}`;
+    roundWinner.textContent = `You win! ${playerTextContent} beats ${computerTextContent}`;
   } else if (result.winner === "computer") {
     ++computerScore;
     computerScoreDiv.textContent = `${computerScore}`;
-    roundWinner.textContent = `You lose! ${result.computerChoice} beats ${result.playerChoice}`;
+    roundWinner.textContent = `You lose! ${computerTextContent} beats ${playerTextContent}`;
   } else {
-    roundWinner.textContent = `It's a tie between ${result.playerChoice} and ${result.computerChoice}`;
+    roundWinner.textContent = `It's a tie between ${playerTextContent} and ${computerTextContent}`;
   }
 }
 
@@ -83,10 +108,10 @@ function disableButtons() {
 
 function checkGameOver() { 
   if (playerScore === 5) {
-    gameWinner.textContent = `Congratulations! You won from ${playerScore} to ${computerScore}`;
+    gameWinner.textContent = `You won!`;
     disableButtons();
   } else if (computerScore === 5) {
-    gameWinner.textContent = `Failed! You lost from ${computerScore} to ${playerScore}`;
+    gameWinner.textContent = `You lost!`;
     disableButtons();
   }
 }
@@ -97,7 +122,8 @@ btnChoice.forEach((btn) => {
     playerSelection = playerSelection.toUpperCase();
     let computerSelection = getComputerChoice();
     let result = playRound(playerSelection, computerSelection);
-    showResult(result);
+    getTextContent(result);
+    showResult(result, playerTextContent, computerTextContent);
     checkGameOver();
   });
 });
