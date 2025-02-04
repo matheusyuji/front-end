@@ -17,20 +17,6 @@ function getComputerChoice() {
   }
 }
 
-function getHumanChoice() {
-  let choice = prompt("Choose Rock, Paper or Scissors");
-
-  switch(choice.toUpperCase()) {
-    case "ROCK":
-    case "PAPER":
-    case "SCISSORS":
-      return choice.toUpperCase();
-    default:
-      alert("Invalid! Try again");
-      return getHumanChoice();
-  }
-}
-
 function showResult(humanChoice, computerChoice, winner) {
   if(winner === "human") {
     console.log(`You win! ${humanChoice} beats ${computerChoice}`);
@@ -102,4 +88,12 @@ function playGame() {
   gameWinner(humanScore, computerScore);
 }
 
-playGame();
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    let playerSelection = event.target.id;
+    playerSelection = playerSelection.toUpperCase();
+    console.log(playerSelection);
+  });
+});
