@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Arial Narrow, sans-serif;
 }
 
 html, body {
@@ -27,7 +28,7 @@ html, body {
   background-color: #3E5879;
   box-shadow: 0 0 10px 5px #3E5879;
   border-radius: 10px;
-  height: 800px;
+  height: 760px;
   width: 600px;
 }
 
@@ -83,6 +84,6 @@ html, body {
   width: 200px;
   margin-top: 50px;
   font-size: 30px;
-  color: black;
+  color: rgb(90, 89, 89);
   background-color: #D8C4B6;
 }
