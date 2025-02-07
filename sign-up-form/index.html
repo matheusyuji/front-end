@@ -22,17 +22,17 @@
         <p>You know you want to.</p>
       </div>
       <div class="middle">
-        <form action="/register" method="post">
+        <form action="#" method="post">
           <div class="form">
             <div class="first-col">
-              <label for="first_name">First Name</label>
-              <input type="text" id="first_name" name="first_name">
+              <label for="first_name">First Name<span> *</span></label>
+              <input type="text" id="first_name" name="first_name" required>
 
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email">
+              <label for="email">Email<span> *</span></label>
+              <input type="email" id="email" name="email" required>
 
-              <label for="user_password">Password</label>
-              <input type="password" id="user_password" name="password">
+              <label for="user_password">Password<span> *</span></label>
+              <input type="password" id="user_password" name="password" required>
             </div>
             <div class="second-col">
               <label for="last_name">Last Name</label>
@@ -41,8 +41,8 @@
               <label for="phone_number">Phone Number</label>
               <input type="tel" id="phone_number" name="phone_number">
 
-              <label for="confirm_password">Confirm Password</label>
-              <input type="password" id="confirm_password" name="confirm_password">
+              <label for="confirm_password">Confirm Password<span> *</span></label>
+              <input type="password" id="confirm_password" name="confirm_password" required>
             </div>
           </div>
           <button type="submit">Create Account</button>
