@@ -53,13 +53,13 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
-.container {
+.left-side {
   display: grid;
   grid-template-columns: 2fr 4fr;
 }
 
 .bg {
-  background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
+  background-image: linear-gradient(45deg, #C4D9FF 0%, #E8F9FF 100%);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -75,5 +75,40 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(0, 0, 0, 0.1);
   height: max(90px,10vh);
   width: 100%;
-  margin-bottom: 40vh;
+  margin-bottom: 50vh;
+}
+
+.right-side {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+  height: 30%;
+  font-family: "Monomaniac One", serif;
+  font-size: 1.5rem;
+  background-color: #C4D9FF;
+}
+
+.top p {
+  padding-top: 40px;
+  width: 60%;
+}
+
+.top > p + p {
+  font-size: 1.9rem;
+}
+
+.middle {
+  height: 60%;
+  background-color: #E8F9FF;
+}
+
+.bottom {
+  height: 10%;
+  background-color: #C4D9FF;
 }
