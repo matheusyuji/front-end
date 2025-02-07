@@ -18,6 +18,13 @@ img, picture, video, canvas, svg {
 
 input, button, textarea, select {
   font: inherit;
+  display: block;
+  font-size: 100%;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+  border: 2px solid #333;
+  border-radius: 5px;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -111,4 +118,46 @@ h1, h2, h3, h4, h5, h6 {
 .bottom {
   height: 10%;
   background-color: #C4D9FF;
+}
+
+form {
+  font-family: "Monomaniac One", serif;
+  font-size: 1.3rem;
+  padding-left: 100px;
+  padding-top: 100px;
+}
+
+.form {
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
+}
+ 
+input:focus {
+  caret-color: #C5BAFF;
+  border-color: #C5BAFF;
+  outline: none;
+}
+
+button {
+  margin-top: 50px;
+  width: 200px;
+  height: 50px;
+  background-color: #C5BAFF;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background: #333;
+  color: #C5BAFF;
+}
+
+a {
+  color: #a18ff8;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #333;
 }
