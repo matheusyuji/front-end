@@ -54,16 +54,50 @@ aside{
   top: 82px;
   position: sticky;
   grid-area: sidebar;
-  background-color: yellow;
+  background-color: #61677A;
+  color: #D8D9DA;
+  display: grid;
+}
+
+.list-sidebar li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.list-sidebar li:hover{
+  color: #D8D9DA;
+}
+
+.list-sidebar li:hover img {
+  filter: brightness(0) saturate(100%) invert(88%) sepia(2%) saturate(41%) hue-rotate(177deg) brightness(93%) contrast(88%);
+}
+
+.list-sidebar li:nth-child(1){
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.list-sidebar li:nth-child(7){
+  margin-bottom: 50px;
+}
+
+.list-sidebar li:nth-child(n+2) {
+  width: 30px;
+  height: 30px;
+  font-size: 1.5rem;
 }
 
 main{
   grid-area: main;
-  background-color: red;
-  
+  background-color: red;  
 }
 
 .ad{
   grid-area: ad;
 }
-
