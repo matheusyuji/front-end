@@ -158,7 +158,42 @@ main{
   background-color: #FBFBFB;  
 }
 
+main h2{
+ margin-top: 10px;
+ margin-left: 20px;
+ font-size: 1.5rem;
+}
+
+.options{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.option{
+  height: 170px;
+  width: 400px;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding-top: 20px;
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: #C4D9FF;
+  border-left: 7px solid;
+}
+
+.title{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.option :nth-child(2){
+  font-size: 1rem;
+  width: 350px;
+}
+
 .ad{
   grid-area: ad;
-  background-color: #FBFBFB;
+  background-color: #720404;
 }
