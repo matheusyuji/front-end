@@ -60,6 +60,10 @@ nav ul{
   gap: 40px;
 }
 
+nav ul li img:hover{
+  cursor: pointer;
+}
+
 .navbar-top {
   grid-row: 1 / 2;
   margin-bottom: 50px;
@@ -118,6 +122,12 @@ button{
   background-color: #C4D9FF;
   font-weight: 600;
   font-size: 1.2rem;
+}
+
+button:hover{
+  background-color: #212121;
+  color: #C4D9FF;
+  cursor: pointer;
 }
 
 aside{
@@ -188,6 +198,12 @@ main h2{
   border-left: 7px solid;
 }
 
+.option:hover{
+  cursor: pointer;
+  border-left: 7px solid #C5BAFF;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);  /* Sombra à direita e embaixo */
+}
+
 .title{
   font-size: 1.3rem;
   font-weight: 600;
@@ -252,6 +268,11 @@ li p{
 
 .trending li{
   margin: 10px;
+}
+
+.trending li img:hover,
+.trending li span:hover{
+  cursor: pointer;
 }
 
 .trending li span{
