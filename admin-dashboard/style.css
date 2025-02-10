@@ -46,16 +46,80 @@ nav{
   top: 0;
   position: sticky;
   grid-area: navbar;
-  background-color: blue;
+  background-color: #E8F9FF;
   padding: 2em;
+  display: grid;
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.navbar-top {
+  grid-row: 1 / 2;
+  margin-bottom: 50px;
+}
+
+input {
+  border-radius: 20px;
+  border: none;
+  height: 30px;
+  width: 800px;
+  margin-right: 150px;
+  background-color: #C5BAFF;
+}
+
+.navbar-top li,
+.navbar-bottom li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-search,
+.navbar-bell{
+  width: 30px;
+  height: 30px;
+}
+
+.navbar-top-account{
+  width: 50px;
+  height: 50px;
+}
+
+.navbar-top li:nth-child(5){
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar-bottom-account{
+  width: 90px;
+  height: 90px;
+}
+
+.navbar-bottom span{
+  margin-right: 455px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+button{
+  border: none;
+  border-radius: 20px;
+  width: 120px;
+  height: 45px;
+  background-color: #C4D9FF;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 aside{
   top: 82px;
-  position: sticky;
   grid-area: sidebar;
-  background-color: #61677A;
-  color: #D8D9DA;
+  background-color: #C4D9FF;
+  color: #212121;
   display: grid;
 }
 
@@ -68,11 +132,7 @@ aside{
 }
 
 .list-sidebar li:hover{
-  color: #D8D9DA;
-}
-
-.list-sidebar li:hover img {
-  filter: brightness(0) saturate(100%) invert(88%) sepia(2%) saturate(41%) hue-rotate(177deg) brightness(93%) contrast(88%);
+  color: #9480fc;
 }
 
 .list-sidebar li:nth-child(1){
@@ -95,9 +155,10 @@ aside{
 
 main{
   grid-area: main;
-  background-color: red;  
+  background-color: #FBFBFB;  
 }
 
 .ad{
   grid-area: ad;
+  background-color: #FBFBFB;
 }
