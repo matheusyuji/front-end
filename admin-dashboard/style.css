@@ -75,7 +75,8 @@ input {
 }
 
 .navbar-top li,
-.navbar-bottom li{
+.navbar-bottom li,
+.trending li{
   display: flex;
   align-items: center;
   gap: 10px;
@@ -87,7 +88,8 @@ input {
   height: 30px;
 }
 
-.navbar-top-account{
+.navbar-top-account,
+.trending-users{
   width: 50px;
   height: 50px;
 }
@@ -246,4 +248,13 @@ li p{
   width: 450px;
   border: none;
   border-radius: 20px;
+}
+
+.trending li{
+  margin: 10px;
+}
+
+.trending li span{
+  font-size: 1rem;
+  font-weight: 600;
 }
