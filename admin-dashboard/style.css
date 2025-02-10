@@ -51,9 +51,12 @@ nav{
   display: grid;
 }
 
+ul{
+  list-style: none;
+}
+
 nav ul{
   display: flex;
-  list-style: none;
   gap: 40px;
 }
 
@@ -167,7 +170,7 @@ main h2{
 .options{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
   gap: 15px;
 }
 
@@ -195,5 +198,52 @@ main h2{
 
 .ad{
   grid-area: ad;
-  background-color: #720404;
+  background-color: #FBFBFB;
+}
+
+.updates{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+.announcements-title,
+.trending-title{
+  font-size: 1.5rem;
+}
+
+.announcements-title{
+  margin-top: 10px;
+}
+
+h3{
+  font-size: 1rem;
+}
+
+li p{
+  font-size: 0.8rem;
+}
+
+.announcements ul li{
+  margin-top: 10px;
+  padding: 5px;
+  width: 300px;
+}
+
+.announcements li:nth-child(2){
+  border-top: 1px dashed black;  
+  border-bottom: 1px dashed black; 
+  border-left: none;
+  border-right: none;
+  width: 380px;
+}
+
+.announcements,
+.trending{
+  background-color: #C4D9FF;
+  height: 260px;
+  width: 450px;
+  border: none;
+  border-radius: 20px;
 }
