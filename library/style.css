@@ -1,7 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #F5F5F5;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#header-title{
+  color: #424242;
+  font-size: 4rem;
+  margin-left: 100px;
+}
+
+#addBook{
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #424242;
+  color: #229799;
+  margin-right: 100px;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
 dialog {
   border: none;
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  position: fixed;       
+  top: 50%;             
+  left: 50%;            
+  transform: translate(-50%, -50%); 
+  z-index: 1000;    
+  width: 200px;
+  height: 200px;       
 }
 
 dialog::backdrop {
@@ -12,5 +50,7 @@ dialog::backdrop {
 form{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
 }
