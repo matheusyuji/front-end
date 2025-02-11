@@ -1,15 +1,19 @@
-* {
-  padding: 0;
+html, body{
+  height: 100%;
   margin: 0;
-  box-sizing: border-box;
-  background-color: #F5F5F5;
+  padding: 0;
 }
 
-.header{
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  background-color: #229799;
 }
 
 #header-title{
@@ -22,6 +26,7 @@
   width: 100px;
   height: 50px;
   cursor: pointer;
+  border: 2px solid #424242;
   background-color: #424242;
   color: #229799;
   margin-right: 100px;
@@ -29,17 +34,15 @@
   font-size: 1rem;
 }
 
+#addBook:hover{
+  background-color: #229799;
+  color: #424242;
+}
+
 dialog {
   border: none;
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  position: fixed;       
-  top: 50%;             
-  left: 50%;            
-  transform: translate(-50%, -50%); 
-  z-index: 1000;    
-  width: 200px;
-  height: 200px;       
 }
 
 dialog::backdrop {
@@ -53,4 +56,19 @@ form{
   padding: 10px;
   align-items: center;
   justify-content: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #229799;
+  font-size: 14px;
+  color: #424242;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+main{
+  flex: 1;
+  padding: 20px;
 }
