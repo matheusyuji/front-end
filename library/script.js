@@ -42,7 +42,7 @@ confirmBtn.addEventListener("click", (event) => {
   const read = document.getElementById("read").checked;
 
   addBookToLibrary(title, author, pages, read);
-  createBook(title, author, pages, read);
+  createBook(title, author, pages, read, myLibrary.length - 1);
   console.log(myLibrary);
 
   bookDialog.close();
@@ -53,12 +53,29 @@ cancelBtn.addEventListener("click", () => {
 });
 
 document.getElementById("library").addEventListener("click", function (event) {
+  const bookDiv = event.target.closest(".book");
+  if (!bookDiv) return;
+
+  const index = bookDiv.getAttribute("data-index");
+  if (index === null) return;
+
+  if (event.target.matches(".btnRead")) {
+    const book = myLibrary[index];
+    book.read = !book.read; 
+
+    event.target.classList.toggle("bookRead", book.read);
+    event.target.classList.toggle("bookUnread", !book.read);
+    event.target.textContent = book.read ? "Read" : "Read";
+  }
+
   if (event.target.matches(".btnRemove")) {
-      event.target.parentElement.remove();
+    myLibrary.splice(index, 1); 
+    bookDiv.remove();
+    updateLibraryIndexes(); 
   }
 });
 
-function createBook(title, author, pages, read){
+function createBook(title, author, pages, read, index){
   const divBook = document.createElement("div");
   const divBookTitle = document.createElement("div");
   const divBookAuthor = document.createElement("div");
@@ -67,6 +84,8 @@ function createBook(title, author, pages, read){
   const btnRemove = document.createElement("button");
 
   divBook.classList.add("book");
+  divBook.setAttribute("data-index", index); 
+
   divBookTitle.classList.add("book-info");
   divBookAuthor.classList.add("book-info");
   divBookPages.classList.add("book-info");
@@ -76,13 +95,10 @@ function createBook(title, author, pages, read){
   divBookTitle.textContent = `Title: ${title}`;
   divBookAuthor.textContent = `Author: ${author}`;
   divBookPages.textContent = `Pages: ${pages}`;
-  btnRead.textContent = "Read";
+  btnRead.textContent = read ? "Read" : "Read";
   btnRemove.textContent = "Remove";
-  if(read) {
-    btnRead.classList.add("bookRead");
-  } else {
-    btnRead.classList.add("bookUnread");
-  }
+
+  btnRead.classList.add(read ? "bookRead" : "bookUnread");
 
   divBook.appendChild(divBookTitle);
   divBook.appendChild(divBookAuthor);
@@ -92,3 +108,17 @@ function createBook(title, author, pages, read){
 
   library.appendChild(divBook);
 }
+
+function updateLibraryIndexes() {
+  document.querySelectorAll(".book").forEach((bookDiv, newIndex) => {
+    bookDiv.setAttribute("data-index", newIndex);
+    myLibrary[newIndex].index = newIndex;
+  });
+}
+
+bookForm.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    confirmBtn.click();
+  }
+});
