@@ -17,7 +17,6 @@ function addBookToLibrary(title, author, pages, read) {
 const addBook = document.getElementById("addBook");
 const bookDialog = document.getElementById("bookDialog");
 const bookForm = document.getElementById("bookForm");
-const outputBox = document.querySelector("output");
 const confirmBtn = bookDialog.querySelector("#confirmBtn");
 const cancelBtn = bookDialog.querySelector("#cancel");
 const library = document.querySelector("#library");
