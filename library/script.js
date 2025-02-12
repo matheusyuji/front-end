@@ -20,6 +20,7 @@ const bookForm = document.getElementById("bookForm");
 const outputBox = document.querySelector("output");
 const confirmBtn = bookDialog.querySelector("#confirmBtn");
 const cancelBtn = bookDialog.querySelector("#cancel");
+const library = document.querySelector("#library");
 
 addBook.addEventListener("click", () => { 
   bookForm.reset();
@@ -41,6 +42,7 @@ confirmBtn.addEventListener("click", (event) => {
   const read = document.getElementById("read").checked;
 
   addBookToLibrary(title, author, pages, read);
+  createBook(title, author, pages, read);
   console.log(myLibrary);
 
   bookDialog.close();
@@ -49,3 +51,44 @@ confirmBtn.addEventListener("click", (event) => {
 cancelBtn.addEventListener("click", () => {
   bookDialog.close();
 });
+
+document.getElementById("library").addEventListener("click", function (event) {
+  if (event.target.matches(".btnRemove")) {
+      event.target.parentElement.remove();
+  }
+});
+
+function createBook(title, author, pages, read){
+  const divBook = document.createElement("div");
+  const divBookTitle = document.createElement("div");
+  const divBookAuthor = document.createElement("div");
+  const divBookPages = document.createElement("div");
+  const btnRead = document.createElement("button");
+  const btnRemove = document.createElement("button");
+
+  divBook.classList.add("book");
+  divBookTitle.classList.add("book-info");
+  divBookAuthor.classList.add("book-info");
+  divBookPages.classList.add("book-info");
+  btnRead.classList.add("btnRead");
+  btnRemove.classList.add("btnRemove");
+
+  divBookTitle.textContent = `Title: ${title}`;
+  divBookAuthor.textContent = `Author: ${author}`;
+  divBookPages.textContent = `Pages: ${pages}`;
+  btnRead.textContent = "Read";
+  btnRemove.textContent = "Remove";
+  if(read) {
+    btnRead.classList.add("bookRead");
+  } else {
+    btnRead.classList.add("bookUnread");
+  }
+
+  divBook.appendChild(divBookTitle);
+  divBook.appendChild(divBookAuthor);
+  divBook.appendChild(divBookPages);
+  divBook.appendChild(btnRead);
+  divBook.appendChild(btnRemove);
+
+  library.appendChild(divBook);
+}
