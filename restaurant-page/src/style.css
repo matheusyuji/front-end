@@ -130,14 +130,23 @@ header, footer {
   margin-top: 50px;
   margin-bottom: 100px;
   will-change: transform;
-  animation: appear 1300ms;
+  animation: appear 2000ms;
 }
 
-.menu-title {
+.contact {
+  animation: appear 2000ms;
+}
+
+.menu-title,
+.contact-title {
   color: gold;
   font-size: 2.3rem;
   padding-top: 20px;
   padding-bottom: 50px;
+}
+
+.contact-title {
+  text-align: center;
 }
 
 .menu-img {
@@ -160,7 +169,14 @@ header, footer {
   font-size: 1rem;
 }
 
-.menu-item-title {
+.contact-info-text {
+  padding-top: 5px;
+  padding-bottom: 40px;
+  font-size: 1rem;
+}
+
+.menu-item-title,
+.contact-info-title {
   color: gold;
   font-size: 1.4rem;
 }
