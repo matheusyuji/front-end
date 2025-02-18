@@ -71,7 +71,7 @@ header {
 }
 
 .logo {
-  font-size: 2.1rem;
+  font-size: 3rem;
   font-family: "Great Vibes", serif;
   color: gold;
 }
@@ -135,7 +135,7 @@ header, footer {
 
 .menu-title {
   color: gold;
-  font-size: 2rem;
+  font-size: 2.3rem;
   padding-top: 20px;
   padding-bottom: 50px;
 }
