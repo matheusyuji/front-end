@@ -49,6 +49,12 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  overflow-y: scroll; 
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none; 
 }
 
 body::before {
