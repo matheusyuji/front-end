@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .great-vibes-regular {
   font-family: "Great Vibes", serif;
@@ -7,10 +7,9 @@
   font-style: normal;
 }
 
-.atkinson-hyperlegible-mono-uniquifier {
-  font-family: "Atkinson Hyperlegible Mono", serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
+.arvo-regular {
+  font-family: "Arvo", serif;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -36,7 +35,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Atkinson Hyperlegible Mono", serif;
+  font-family: "Arvo", serif;
 }
 
 html, body {
